@@ -1,0 +1,65 @@
+/* Header.module.css */
+
+/* Header */
+
+.header {
+    background: var(--color-1) url("/images/header-bg.webp") no-repeat center center / cover;
+    height: 1011px;
+}
+
+/* Header Navigation */
+
+.header nav {
+    background: var(--color-1);
+    box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4);
+}
+
+.header nav ul {
+    font-family: var(--font-family-roboto);
+    font-size: 1rem;
+    gap: 3.75rem;
+}
+
+.header nav ul li a {
+    position: relative;
+    height: 3.5rem;
+    padding: 0 0.938rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-4);
+}
+
+.header nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+    background: var(--color-3);
+    width: 0;
+    height: 0.188rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.header nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header button.loginBtn {
+    background: var(--color-2);
+    cursor: pointer;
+}
+
+.header button.bookConsultationBtn {
+    background: var(--color-3);
+    cursor: pointer;
+}
+
+/* Hero */
+
+.heroContainer {
+    max-width: 889px;
+    width: 100%;
+}

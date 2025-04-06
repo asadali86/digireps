@@ -1,0 +1,259 @@
+@import "tailwindcss";
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+:root {
+  --color-1: #F0F0F3;
+  --color-2: #10316B;
+  --color-3: #FEB402;
+  --color-4: #000000;
+  --color-5: #FFFFFF;
+  --color-6: #1E1E1E;
+  --color-7: #525D7D;
+  --color-8: #F9F9F9;
+  --font-family-roboto: 'Roboto', sans-serif;
+  --font-family-poppins: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1530px;
+}
+
+.txtBlue {
+  color: var(--color-2);
+}
+
+.txtYellow {
+  color: var(--color-3);
+}
+
+.bgColorBlue {
+  background: var(--color-2);
+}
+
+.bgColorYellow {
+  background: var(--color-3);
+}
+
+.blueCloud {
+  background: url("/images/cloud-bg.webp") no-repeat center top;
+  margin: -14rem 0 0 0;
+  background-size: 100%;
+}
+
+.lightGray {
+  background: var(--color-8);
+}
+
+.ceContainer {
+  max-width: 1179px;
+  width: 100%;
+}
+
+.ceContainer .logoLine {
+  position: relative;
+  width: 7rem;
+}
+
+.ceContainer .logoLine img {
+  position: relative;
+  z-index: 2;
+}
+
+.ceContainer .logoLine::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  width: 1px;
+  height: 100%;
+  background: rgb(255 255 255 / 20%);
+  z-index: 1;
+}
+
+.ceContainer .contentArea {
+  width: 73rem;
+}
+
+.pointList {
+  margin: 0 0 0 -150px;
+}
+
+.pointList .plContentArea {
+  margin: 0 0 0 130px;
+}
+
+.pointList .plContentArea h3 {
+  font-family: var(--font-family-poppins);
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1;
+  text-transform: capitalize;
+  margin: 0 0 0.813rem 0;
+}
+
+.paperBg {
+  background: url("/images/paper-bg.webp") no-repeat center top;
+  height: 36.75rem;
+  background-size: 100%;
+  padding: 2rem 2rem 2.5rem 2rem;
+}
+
+#empowerSlider h3 {
+  font-family: var(--font-family-roboto);
+  font-size: 1.75rem;
+}
+
+#empowerSlider p {
+  font-size: 1.063rem;
+  color: rgb(30 30 30 / 70%);
+  line-height: 1.7;
+}
+
+.dot-heading {
+  font-family: var(--font-family-roboto);
+  display: inline-flex;
+  border: 1px solid rgba(64, 64, 64, 0.26);
+  font-size: 1.25rem;
+  position: relative;
+}
+
+.dot-heading::before {
+  content: '';
+  width: 1.125rem;
+  height: 1.125rem;
+  background: var(--color-3);
+  position: absolute;
+  left: 10%;
+  top: 34%;
+  border-radius: 100%;
+}
+
+.videoSec {
+  position: relative;
+}
+
+.videoSec img {
+  width: 100%;
+}
+
+.videoSec .playArea {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.successStories .leftCol {
+  max-width: 40%;
+  width: 100%;
+}
+
+.successStories .rightCol {
+  max-width: 50%;
+  width: 100%;
+  height: 40.938rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.successStories .rightCol .slide {
+  border-radius: 1.625rem;
+}
+
+.successStories p {
+  color: var(--color-7)
+}
+
+.successStories .slide h4 {
+  font-size: 1.5rem;
+}
+
+.successStories .slide p {
+  color: var(--color-7);
+}
+
+.successStories .slide button {
+  font-size: 0.875rem;
+  font-family: var(--font-family-poppins);
+}
+
+.partnerLogos img {
+  filter: grayscale(1);
+  opacity: 0.7;
+  width: auto;
+}
+
+.hearClients {
+  background: url("/images/wave-bg.webp") no-repeat center top;
+  height: 69.875rem;
+  background-size: 100%;
+}
+
+.hearClients p {
+  font-size: 1.25rem;
+}
+
+.hearClients .leftCol {
+  width: 45%;
+  background-image: url('/images/left-quote.svg'), url('/images/right-quote.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, top 55px right;
+}
+
+.hearClients .rightCol {
+  width: 50%;
+}
+
+.hearClients .swiper-pagination {
+  text-align: left;
+  position: absolute;
+  top: 70% !important;
+}
+
+.hearClients .swiper-pagination-bullet {
+  width: 20px !important;
+  height: 20px !important;
+  background: #D9D9D9 !important;
+  margin: 0 5px !important;
+  border-radius: 100% !important;
+  opacity: 1 !important;
+}
+
+.hearClients .swiper-pagination-bullet-active {
+  background: #D9D9D9 !important;
+  width: 109px !important;
+  opacity: 1 !important;
+  border-radius: 30px !important;
+}
+
+button {
+  font-family: var(--font-family-roboto);
+  font-size: 1rem;
+}
+
+h1 {
+  font-family: var(--font-family-poppins);
+  font-size: 3.75rem;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--color-4);
+  line-height: 1.66;
+}
+
+h2 {
+  font-family: var(--font-family-roboto);
+  font-size: 3.125rem;
+  text-transform: capitalize;
+  line-height: 1.3;
+}
+
+p {
+  font-family: var(--font-family-roboto);
+  font-weight: 400;
+  font-size: 1rem;
+}
