@@ -47,7 +47,7 @@ const SuccessStories = () => {
             <div className="slide lightGray p-10">
                 <Image src="/images/medianug.webp" alt=" " width={105} height={37} className='mb-3' />
                 <h4 className='txtBlue mb-3 font-black uppercase'>Drip</h4>
-                <p className='mb-3'>DigiReps optimized MediaNug's sales process by implementing structured lead tracking, consistent outreach, and workflow improvements to boost conversions</p>
+                <p className='mb-3'>DigiReps optimized MediaNugs sales process by implementing structured lead tracking, consistent outreach, and workflow improvements to boost conversions</p>
                 <button className='bgColorYellow text-white rounded-full p-5 flex items-center px-10'>
                     See More <Image src="/images/right-arrow.svg" alt=" " width={16} height={16} className='ml-2' />
                 </button>
