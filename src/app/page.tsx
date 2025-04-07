@@ -5,6 +5,11 @@ import DigiRepsDifference from "../app/sections/DigiRepsDifference"
 import SuccessStories from "../app/sections/SuccessStories"
 import PartnerLogos from "../app/sections/PartnerLogos"
 import HearClientsSuccessWorlds from "../app/sections/HearClientsSuccessWorlds"
+import SmartWay from "../app/sections/SmartWay"
+import ScopeServices from "../app/sections/ScopeServices"
+import GrowFasterBetterSmarter from "../app/sections/GrowFasterBetterSmarter"
+import DRCounters from "../app/sections/DRCounters"
+import GrowCostEffectively from "../app/sections/GrowCostEffectively"
 
 const Home = () => {
   return (<>
@@ -23,6 +28,21 @@ const Home = () => {
       <PartnerLogos />
       {/* Hear It from Our Clients: Success in Their Own Words */}
       <HearClientsSuccessWorlds />
+      {/* SmartWay */}
+      <SmartWay />
+      {/* Scope Of Services */}
+      <ScopeServices />
+      {/* Grow Faster Better Smarter */}
+      <GrowFasterBetterSmarter />
+       {/* DR Counters */}
+       <DRCounters />
+        {/* Grow Cost Effectively */}
+      <GrowCostEffectively />
+
+
+
+
+
     </main>
   </>
   );

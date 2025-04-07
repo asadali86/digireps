@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const CompetitiveEdge = () => {
   return (
-    <div className="blueCloud pt-56">
+    <div className="blueCloud pt-56 sticky">
         <div className='bgColorBlue pb-20'>
             <div className="ceContainer mx-auto flex">
                 <div className="logoLine ml-20">
