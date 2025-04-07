@@ -5,6 +5,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Image from 'next/image'
+import ScrollReveal from '../../components/layout/ScrollReveal';
 
 const services = [
     {
@@ -32,11 +33,17 @@ const services = [
 const ScopeServices = () => {
   return (
     <section className='scopeServices pl-25 pr-0 py-25'>
-        <h2 className='txtdarkGray font-medium mb-2'>Scope Of <span className='txtYellow'>Sevices</span></h2>
-        <p className='mb-8'>Find a plan that fits your needs and budget. No hidden fees, just results-driven solution</p>
-        <div className="mb-17">
-            <button className='bgColorBlue text-white rounded-full px-20 py-4'>Book Consultation</button>
-        </div>
+        <ScrollReveal>
+          <h2 className='txtdarkGray font-medium mb-2'>Scope Of <span className='txtYellow'>Sevices</span></h2>
+        </ScrollReveal>
+        <ScrollReveal delay={0.5}>
+          <p className='mb-8'>Find a plan that fits your needs and budget. No hidden fees, just results-driven solution</p>
+        </ScrollReveal>
+        <ScrollReveal delay={1}>
+          <div className="mb-17">
+              <button className='bgColorBlue text-white rounded-full px-20 py-4'>Book Consultation</button>
+          </div>
+        </ScrollReveal>
         <Swiper modules={[Navigation]} navigation spaceBetween={30} slidesPerView={3.5} loop={true} className="px-4" breakpoints={{
             0: { slidesPerView: 1.2 },
             768: { slidesPerView: 2.2 },

@@ -1,23 +1,12 @@
 import React from 'react'
+import ScrollCounter  from "@/components/Counter";
 
 const stats = [
-    {
-      value: '$1M+',
-      label: 'Cost Savings Annually',
-    },
-    {
-      value: '150+',
-      label: 'Clients Served',
-    },
-    {
-      value: '50+',
-      label: 'Years Leadership Experience',
-    },
-    {
-      value: '350+',
-      label: 'Reps Placed',
-    },
-  ];
+  { label: "Cost Savings Annually", value: 1 },
+  { label: "Clients Served", value: 150 },
+  { label: "Years Leadership Experience", value: 50 },
+  { label: "Reps Placed", value: 350 },
+];
 
 export const DRCounters = () => {
   return (
@@ -32,13 +21,16 @@ export const DRCounters = () => {
                     borderLeft: index !== 0 ? '1px solid #E5E7EB' : 'none',
                     }}
                 >
-                    <h2 className="font-medium txtBlue">{stat.value}</h2>
+                    <h2 className="font-medium txtBlue">
+                    <ScrollCounter target={stat.value} duration={2000} />
+                    </h2>
                     <p>{stat.label}</p>
                 </div>
                 ))}
             </div>
         </div>
     </section>
+    
   )
 }
 

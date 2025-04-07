@@ -1,15 +1,21 @@
 import React from 'react'
 import Image from 'next/image'
+import ScrollReveal from '../../components/layout/ScrollReveal';
 
 const SuccessStories = () => {
   return (
     <section className='successStories pt-25 pl-25 pr-25 flex justify-between'>
         <div className="leftCol">
-            <h3 className='text-center rounded-full dot-heading font-medium mb-5 px-10 py-4'><span className='pl-2'>Case Studies</span></h3>
-            <h2 className='txtBlue font-medium mb-5'>
-                Success <span className='txtYellow'>Stories</span>: How We Help <span className='txtYellow'>Businesses</span> Scale
-            </h2>
-            <p>Discover how DigiReps has helped businesses grow by providing top-tier remote professionals researchers. See real-world examples of our impact and how we drive success remotely.</p>
+            <ScrollReveal>
+                <h3 className='text-center rounded-full dot-heading font-medium mb-5 px-10 py-4'><span className='pl-2'>Case Studies</span></h3>
+            </ScrollReveal>
+            <ScrollReveal delay={0.5}>
+                <h2 className='txtBlue font-medium mb-5'>
+                    Success <span className='txtYellow'>Stories</span>: How We Help <span className='txtYellow'>Businesses</span> Scale
+                </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={1}>
+            <p>Discover how DigiReps has helped businesses grow by providing top-tier remote professionals researchers. See real-world examples of our impact and how we drive success remotely.</p></ScrollReveal>
         </div>
         <div className="rightCol">
             <div className="slide lightGray p-10 mb-8">

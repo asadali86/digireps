@@ -3,6 +3,7 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
+import ScrollReveal from '../../components/layout/ScrollReveal';
 
 const EmpowerYourBusiness = () => {
 
@@ -59,28 +60,32 @@ const EmpowerYourBusiness = () => {
   
     return (
         <section id="empowerSlider" className='py-30'>
-            <h2 className='txtBlue font-medium ml-43 mb-20'>
-                Empower Your <span className='txtYellow'>Business</span> <br /> with Top Talent
-            </h2>  
-            <div className="max-w-[1730px] ml-auto">
-                <Swiper className="overflow-visible" modules={[Autoplay]} spaceBetween={30} loop={true} slidesPerView={3.5} centeredSlides={false} pagination={{ clickable: true }} autoplay={{delay: 0, disableOnInteraction: false,}} speed={4000} freeMode={true}breakpoints={{
-                    320: { slidesPerView: 1.2 },
-                    640: { slidesPerView: 2 },
-                    1024: { slidesPerView: 2.5 },
-                    1280: { slidesPerView: 3.5 },
-                }}
-                >
-                    {cards.map((card, index) => (
-                        <SwiperSlide key={index} className='paperBg'>
-                            <div>
-                                <figure className='h-65'><img src={card.image} alt={card.title} className='mb-5' /></figure>
-                                <h3 className='txtBlue font-normal mb-5'>{card.title}</h3>
-                                <p>{card.description}</p>
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>          
+            <ScrollReveal>
+              <h2 className='txtBlue font-medium ml-43 mb-20'>
+                  Empower Your <span className='txtYellow'>Business</span> <br /> with Top Talent
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={0.5}>
+              <div className="max-w-[1730px] ml-auto">
+                  <Swiper className="overflow-visible" modules={[Autoplay]} spaceBetween={30} loop={true} slidesPerView={3.5} centeredSlides={false} pagination={{ clickable: true }} autoplay={{delay: 0, disableOnInteraction: false,}} speed={4000} freeMode={true}breakpoints={{
+                      320: { slidesPerView: 1.2 },
+                      640: { slidesPerView: 2 },
+                      1024: { slidesPerView: 2.5 },
+                      1280: { slidesPerView: 3.5 },
+                  }}
+                  >
+                      {cards.map((card, index) => (
+                          <SwiperSlide key={index} className='paperBg'>
+                              <div>
+                                  <figure className='h-65'><img src={card.image} alt={card.title} className='mb-5' /></figure>
+                                  <h3 className='txtBlue font-normal mb-5'>{card.title}</h3>
+                                  <p>{card.description}</p>
+                              </div>
+                          </SwiperSlide>
+                      ))}
+                  </Swiper>
+              </div>
+            </ScrollReveal>
         </section>
     );
   }
