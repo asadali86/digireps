@@ -2,10 +2,29 @@ import React from 'react'
 import ScrollCounter  from "@/components/Counter";
 
 const stats = [
-  { label: "Cost Savings Annually", value: 1 },
-  { label: "Clients Served", value: 150 },
-  { label: "Years Leadership Experience", value: 50 },
-  { label: "Reps Placed", value: 350 },
+  { label: "Cost Savings Annually",
+    value: 1,
+    text: "M+",
+    description: "$"
+  },
+  {
+    label: "Clients Served",
+    value: 150,
+    text: "+",
+    description: ""
+  },
+  {
+    label: "Years Leadership Experience",
+    value: 50,
+    text: "+",
+    description: ""
+  },
+  {
+    label: "Reps Placed",
+    value: 350,
+    text: "+",
+    description: ""
+  },
 ];
 
 export const DRCounters = () => {
@@ -22,7 +41,7 @@ export const DRCounters = () => {
                     }}
                 >
                     <h2 className="font-medium txtBlue">
-                    <ScrollCounter target={stat.value} duration={2000} />
+                    {stat.description}<ScrollCounter target={stat.value} duration={2000} />{stat.text}
                     </h2>
                     <p>{stat.label}</p>
                 </div>

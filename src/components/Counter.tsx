@@ -23,7 +23,7 @@ export default function ScrollCounter({ target = 100, duration = 2000 }) {
   }, [inView, target, duration]);
 
   return (
-    <span ref={ref} className="text-4xl font-bold">
+    <span ref={ref}>
       {count}
     </span>
   );
