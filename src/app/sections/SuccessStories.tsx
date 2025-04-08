@@ -7,11 +7,6 @@ import ScrollReveal from '../../components/layout/ScrollReveal';
 import 'swiper/css';
 import "swiper/css/autoplay";
 
-import SwiperCore from 'swiper';
-import { Mousewheel, Pagination } from 'swiper/modules';
-
-SwiperCore.use([Mousewheel]);
-
 const SuccessStories = () => {
   return (
     <>
