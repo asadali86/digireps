@@ -52,6 +52,85 @@
   background-size: 100%;
 }
 
+.heading-bottom-line {
+  background: url("/images/heading-bottom-line.svg") no-repeat top left;
+}
+
+.heading-bottom-line-white {
+  background: url("/images/heading-bottom-line-white.svg") no-repeat top left;
+}
+
+.heading-bottom-line-black-orange {
+  background: url("/images/heading-bottom-line-black.svg") no-repeat top left, url("/images/heading-bottom-line-orange2.svg") no-repeat top left;
+}
+
+.btnAnimate {
+  position: relative;
+  overflow: hidden;
+}
+
+.btnAnimate::after {
+  content: '';
+  position: absolute;
+  background: #FEB402;
+  width: 225px;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition:
+    width 0.4s cubic-bezier(0.1, 0.7, 1.0, 0.1),
+    height 0.4s cubic-bezier(0.1, 0.7, 1.0, 0.1) 0.4s;
+}
+
+.btnAnimate:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.btnAnimate:hover span {
+  position: relative;
+  z-index: 1;
+}
+
+.btnAnimate2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.btnAnimate2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  background: var(--color-10);
+}
+
+.btnAnimate2:hover::before {
+  width: 100%;
+}
+
+.btnAnimate2 span {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  gap: 0.5rem;
+}
+
+.btnAnimate2 span img {
+  transform: rotate(0deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.btnAnimate2:hover span img {
+  transform: rotate(-30deg);
+  transition: all 0.5s ease-in-out;
+}
+
 .ceContainer {
   max-width: 1179px;
   width: 100%;
@@ -103,7 +182,7 @@
 
 .paperBg {
   background: url("/images/paper-bg.webp") no-repeat center top;
-  height: 36.75rem;
+  height: 36.75rem !important;
   background-size: 100%;
   padding: 2rem 2rem 2.5rem 2rem;
 }
@@ -163,7 +242,7 @@
   max-width: 50%;
   width: 100%;
   height: 40.938rem;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 
@@ -190,7 +269,11 @@
 
 .partnerLogos img {
   filter: grayscale(1);
-  opacity: 0.7;
+  width: 70%;
+}
+
+.partnerLogos .swiper-wrapper {
+  align-items: center;
 }
 
 .hearClients {
@@ -246,8 +329,40 @@
   color: rgb(255 255 255 / 50%);
 }
 
+.scopeServices {
+  position: relative;
+}
+
 .scopeServices p {
   color: rgb(0 0 0 / 70%);
+}
+
+.scopeServices .swiper-button-prev {
+  background: url("/images/left-arrow.webp") no-repeat center center;
+  width: 5rem;
+  height: 5.5rem;
+  top: 2rem;
+  left: auto;
+  right: 7rem;
+}
+
+.scopeServices .swiper-button-prev::after {
+  opacity: 0;
+}
+
+.scopeServices .swiper-button-next {
+  background: url("/images/right-arrow.webp") no-repeat center center;
+  width: 5rem;
+  height: 5.5rem;
+  top: 2rem;
+}
+
+.scopeServices .swiper-button-next::after {
+  opacity: 0;
+}
+
+.scopeServices .swiper-wrapper {
+  margin: 0;
 }
 
 .paperBg2 {
@@ -439,6 +554,58 @@ footer .fs-row a::before {
 
 footer .fs-row a:hover {
   color: var(--color-5);
+}
+
+.successStories .heading-bottom-line {
+  background-position: top 3.5rem left;
+}
+
+#empowerSlider .heading-bottom-line {
+  background-position: top 8rem left 7rem;
+  padding-bottom: 2rem;
+}
+
+.hearClients .heading-bottom-line-white {
+  background-position: left top 12rem;
+  padding-bottom: 3rem;
+}
+
+.growFastBetterSmarter .heading-bottom-line-black-orange {
+  background-position: left 24rem top 4rem, bottom 0rem left;
+  padding-bottom: 2rem;
+}
+
+.provenProcessStep .colStep {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.provenProcessStep h4 {
+  font-family: var(--font-family-roboto);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 40px;
+  text-transform: capitalize;
+  color: var(--color-10);
+}
+
+.provenProcessStep p {
+  font-family: var(--font-family-roboto);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 30px;
+  color: var(--color-6);
+  opacity: 0.7;
+}
+
+.provenProcessStep .colStep figure img {
+  display: inline-block;
 }
 
 @media screen and (max-width: 1536px) {

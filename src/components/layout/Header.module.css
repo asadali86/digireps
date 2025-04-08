@@ -47,14 +47,56 @@
     width: 100%;
 }
 
-.header button.loginBtn {
+.header nav ul li a.active {
+    position: relative !important;
+}
+
+.header nav ul li a.active::after {
+    width: 100% !important;
+}
+
+/* .header button.loginBtn {
     background: var(--color-2);
     cursor: pointer;
+}
+
+.header button.loginBtn:hover {
+    background: var(--color-3);
+} */
+
+.header button.loginBtn {
+    background-color: var(--color-2);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.header button.loginBtn:hover {
+    background-color: var(--color-3);
 }
 
 .header button.bookConsultationBtn {
     background: var(--color-3);
     cursor: pointer;
+    color: var(--color-6);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.header button.bookConsultationBtn:hover {
+    background: var(--color-2);
+    color: var(--color-5);
+    transition: all 0.5s ease-in-out;
+}
+
+.header button.bookConsultationBtn img {
+    transition: all 0.5s ease-in-out;
+}
+
+.header button.bookConsultationBtn:hover img {
+    filter: brightness(0) invert(1);
+    transition: all 0.5s ease-in-out;
 }
 
 /* Hero */

@@ -7,6 +7,8 @@ import 'swiper/css/navigation';
 import Image from 'next/image'
 import ScrollReveal from '../../components/layout/ScrollReveal';
 
+import { useEffect, useRef, useState } from "react";
+
 const services = [
     {
       title: 'Sales Development Rep',
@@ -31,6 +33,13 @@ const services = [
 ];  
 
 const ScopeServices = () => {
+  const prevRef = useRef<HTMLButtonElement>(null);
+  const nextRef = useRef<HTMLButtonElement>(null);
+  const [swiperReady, setSwiperReady] = useState(false);
+  
+  useEffect(() => {
+    setSwiperReady(true); // Wait for refs to be set
+  }, []);
   return (
     <section className='scopeServices pl-25 pr-0 py-25'>
         <ScrollReveal>
@@ -44,7 +53,26 @@ const ScopeServices = () => {
               <button className='bgColorBlue text-white rounded-full px-20 py-4'>Book Consultation</button>
           </div>
         </ScrollReveal>
-        <Swiper modules={[Navigation]} navigation spaceBetween={30} slidesPerView={3.5} loop={true} className="px-4" breakpoints={{
+        {swiperReady && (
+        <Swiper
+        modules={[Navigation]}
+        navigation={{
+          prevEl: prevRef.current,
+          nextEl: nextRef.current,
+        }}
+        onInit={(swiper) => {
+          if (swiper.params.navigation && typeof swiper.params.navigation === "object") {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+          }
+          swiper.navigation.init();
+          swiper.navigation.update();
+        }}
+          spaceBetween={30}
+          slidesPerView={3.5}
+          loop={true}
+          className="px-4"
+          breakpoints={{
             0: { slidesPerView: 1.2 },
             768: { slidesPerView: 2.2 },
             1024: { slidesPerView: 3.5 },
@@ -70,6 +98,11 @@ const ScopeServices = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        )}
+        <div>
+          <button ref={prevRef} className="swiper-button-prev"></button>
+          <button ref={nextRef} className="swiper-button-next"></button>
+        </div>
     </section>
   )
 }

@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
             <div className='col-03 p-8'>
                 <h3 className='text-white mb-5'>Highly Rated</h3>
-                <div className="flex items-center mb-5">
+                <div className="flex items-center mb-5 gap-5">
                     <Image src="/images/google-reviews-logo.webp" alt=" " width={121} height={61} />
                     <Image src="/images/trust-pilot-logo.webp" alt=" " width={128} height={61} />
                     <Image src="/images/clutch-logo.webp" alt=" " width={155} height={44} />
@@ -47,7 +47,7 @@ const Footer = () => {
                 <a href="#">Testimonials</a>
                 <a href="#">Contact Us</a>
             </div>
-            <p>© Copyright 2025 | DigiFly Global LLC DBA DigiReps.co</p>
+            <p>© Copyright 2025 | Digify Global LLC DBA DigiReps.co</p>
         </div>
     </footer>
   )

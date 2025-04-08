@@ -50,7 +50,7 @@ const HearClientsSuccessWorlds = () => {
         <section className='hearClients'>
             <div className='pt-76 pl-43'>
                 <ScrollReveal>
-                <h2 className='text-white font-medium'>
+                <h2 className='text-white font-medium heading-bottom-line-white'>
                     Hear It from Our <span className='txtYellow'>Clients</span>: <br /> Success in Their Own <br /> <span className='txtYellow'>Words</span>
                 </h2>
                 </ScrollReveal>

@@ -16,7 +16,7 @@ export const GrowFasterBetterSmarter = () => {
                   <h3 className='text-center rounded-full dot-heading font-medium mb-5 px-10 py-4'><span className='pl-2'>Faster Approach</span></h3>
                 </ScrollReveal>
                 <ScrollReveal delay={0.5}>
-                  <h2 className='font-medium mb-5'>Grow 10x Faster, Better, <br /> Smarter.</h2>
+                  <h2 className='font-medium mb-5 heading-bottom-line-black-orange'>Grow 10x Faster, Better, <br /> Smarter.</h2>
                 </ScrollReveal>
                 <ScrollReveal delay={1}>
                   <p className='mb-5'>Say goodbye to endless job postings, endless resumes, and endless frustration. With our proven solutions, you can finally focus on what you do best – growing your business.</p>

@@ -61,7 +61,7 @@ const EmpowerYourBusiness = () => {
     return (
         <section id="empowerSlider" className='py-30'>
             <ScrollReveal>
-              <h2 className='txtBlue font-medium ml-43 mb-20'>
+              <h2 className='txtBlue font-medium ml-43 mb-20 heading-bottom-line'>
                   Empower Your <span className='txtYellow'>Business</span> <br /> with Top Talent
               </h2>
             </ScrollReveal>
@@ -78,7 +78,7 @@ const EmpowerYourBusiness = () => {
                           <SwiperSlide key={index} className='paperBg'>
                               <div>
                                   <figure className='h-65'><img src={card.image} alt={card.title} className='mb-5' /></figure>
-                                  <h3 className='txtBlue font-normal mb-5'>{card.title}</h3>
+                                  <h3 className='txtBlue font-normal mb-3'>{card.title}</h3>
                                   <p>{card.description}</p>
                               </div>
                           </SwiperSlide>
