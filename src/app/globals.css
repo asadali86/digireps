@@ -64,6 +64,10 @@
   background: url("/images/heading-bottom-line-black.svg") no-repeat top left, url("/images/heading-bottom-line-orange2.svg") no-repeat top left;
 }
 
+.heading-bottom-line-blue-orange {
+  background: url("/images/heading-bottom-blue-line.svg") no-repeat top left, url("/images/heading-bottom-yellow-line2.svg") no-repeat top left;
+}
+
 .btnAnimate {
   position: relative;
   overflow: hidden;
@@ -365,6 +369,16 @@
   margin: 0;
 }
 
+.button-handle {
+  position: absolute;
+  top: 8%;
+  right: 5%;
+}
+
+.scopeServices .swiper-button-prev:hover, .scopeServices .swiper-button-next:hover {
+  opacity: 0.6;
+}
+
 .paperBg2 {
   background: url("/images/paper-bg2.webp") no-repeat center top;
   height: 31.625rem !important;
@@ -427,13 +441,23 @@ button {
   font-size: 1rem;
 }
 
-h1 {
+/* h1 {
   font-family: var(--font-family-poppins);
   font-size: 3.75rem;
   text-align: center;
   text-transform: capitalize;
   color: var(--color-4);
   line-height: 1.66;
+} */
+
+.heroTextAnimate {
+  font-family: var(--font-family-poppins);
+  font-size: 3.75rem;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--color-4);
+  line-height: 1.66;
+  margin: 0 0 2rem 0;
 }
 
 h2 {
@@ -575,6 +599,11 @@ footer .fs-row a:hover {
   padding-bottom: 2rem;
 }
 
+.provenProcessStep .heading-bottom-line-blue-orange {
+  background-position: left 26rem top 4rem, bottom 0rem left 13rem;
+  padding-bottom: 1rem;
+}
+
 .provenProcessStep .colStep {
   width: 25%;
   display: flex;
@@ -608,10 +637,45 @@ footer .fs-row a:hover {
   display: inline-block;
 }
 
+.provenProcessStep .border-blue-600 {
+  border-color: var(--color-10)
+}
+
+.videoArea {
+  width: 1326px;
+  height: 726px;
+  background: var(--color-5);
+  border: solid 10px #E0DFE6;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+main.full-vh {
+  margin-top: 100vh;
+}
+
 @media screen and (max-width: 1536px) {
 
   html {
     font-size: 14px;
+  }
+  
+  .smartWay h2 {
+    font-size: 3.9rem;
+  }
+
+  .hearClients .rightCol {
+    width: 40%;
+  }
+
+  .hearClients .rightCol img {
+    width: 100%;
   }
 
 }

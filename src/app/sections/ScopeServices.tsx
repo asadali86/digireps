@@ -5,7 +5,6 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Image from 'next/image'
-import ScrollReveal from '../../components/layout/ScrollReveal';
 
 import { useEffect, useRef, useState } from "react";
 
@@ -42,17 +41,17 @@ const ScopeServices = () => {
   }, []);
   return (
     <section className='scopeServices pl-25 pr-0 py-25'>
-        <ScrollReveal>
+        
           <h2 className='txtdarkGray font-medium mb-2'>Scope Of <span className='txtYellow'>Sevices</span></h2>
-        </ScrollReveal>
-        <ScrollReveal delay={0.5}>
+        
+        
           <p className='mb-8'>Find a plan that fits your needs and budget. No hidden fees, just results-driven solution</p>
-        </ScrollReveal>
-        <ScrollReveal delay={1}>
+        
+        
           <div className="mb-17">
               <button className='bgColorBlue text-white rounded-full px-20 py-4'>Book Consultation</button>
           </div>
-        </ScrollReveal>
+        
         {swiperReady && (
         <Swiper
         modules={[Navigation]}
@@ -90,8 +89,11 @@ const ScopeServices = () => {
                             ))}
                         </ul>
                         <div className="mt-5">
-                            <button className='bgColorYellow text-white rounded-full p-5 flex items-center px-10 ml-auto'>
+                            {/* <button className='bgColorYellow text-white rounded-full p-5 flex items-center px-10 ml-auto'>
                                 See More <Image src="/images/right-arrow.svg" alt=" " width={16} height={16} className='ml-2' />
+                            </button> */}
+                            <button className='bgColorYellow text-white rounded-full p-5 flex items-center px-10 ml-auto btnAnimate2'>
+                                <span>See More <Image src="/images/right-arrow.svg" alt=" " width={18} height={18} className='ml-2' /></span>
                             </button>
                         </div>
                     </div>
@@ -99,7 +101,7 @@ const ScopeServices = () => {
           ))}
         </Swiper>
         )}
-        <div>
+        <div className='button-handle'>
           <button ref={prevRef} className="swiper-button-prev"></button>
           <button ref={nextRef} className="swiper-button-next"></button>
         </div>

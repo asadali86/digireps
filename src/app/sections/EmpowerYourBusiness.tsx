@@ -3,7 +3,6 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
-import ScrollReveal from '../../components/layout/ScrollReveal';
 
 const EmpowerYourBusiness = () => {
 
@@ -60,12 +59,12 @@ const EmpowerYourBusiness = () => {
   
     return (
         <section id="empowerSlider" className='py-30'>
-            <ScrollReveal>
+            
               <h2 className='txtBlue font-medium ml-43 mb-20 heading-bottom-line'>
                   Empower Your <span className='txtYellow'>Business</span> <br /> with Top Talent
               </h2>
-            </ScrollReveal>
-            <ScrollReveal delay={0.5}>
+            
+            
               <div className="max-w-[1730px] ml-auto">
                   <Swiper className="overflow-visible" modules={[Autoplay]} spaceBetween={30} loop={true} slidesPerView={3.5} centeredSlides={false} pagination={{ clickable: true }} autoplay={{delay: 0, disableOnInteraction: false,}} speed={4000} freeMode={true}breakpoints={{
                       320: { slidesPerView: 1.2 },
@@ -85,7 +84,7 @@ const EmpowerYourBusiness = () => {
                       ))}
                   </Swiper>
               </div>
-            </ScrollReveal>
+            
         </section>
     );
   }

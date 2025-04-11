@@ -5,7 +5,6 @@ import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { Autoplay } from 'swiper/modules';
-import ScrollReveal from '../../components/layout/ScrollReveal';
 
 const HearClientsSuccessWorlds = () => {
 
@@ -48,12 +47,12 @@ const HearClientsSuccessWorlds = () => {
     ];
     return (
         <section className='hearClients'>
-            <div className='pt-76 pl-43'>
-                <ScrollReveal>
+            <div className='pt-76 pl-43 pr-43'>
+                
                 <h2 className='text-white font-medium heading-bottom-line-white'>
                     Hear It from Our <span className='txtYellow'>Clients</span>: <br /> Success in Their Own <br /> <span className='txtYellow'>Words</span>
                 </h2>
-                </ScrollReveal>
+                
                 <Swiper modules={[Pagination, Autoplay]} pagination={{ clickable: true }} loop={true} autoplay={{delay: 2000, disableOnInteraction: false,}} speed={3000} freeMode={true} className="w-full">
                     {testimonials.map((item, index) => (
                         <SwiperSlide key={index}>

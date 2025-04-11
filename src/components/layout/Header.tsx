@@ -11,7 +11,7 @@ const Header = () => {
         <div className="container mx-auto mb-8">
             <nav className='flex justify-between items-center h-20 rounded-full pl-12 pr-3'>
                 <div className="logo">
-                    <Image src="/images/logo.webp" alt="Digi Reps" width={148} height={40} />
+                    <Image src="/images/digireps-logo-new.png" alt="Digi Reps" width={148} height={40} />
                 </div>
                 <ul className='flex items-center font-medium'>
                     <li><a href="#" className={styles.active}>Home</a></li>
