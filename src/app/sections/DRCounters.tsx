@@ -1,32 +1,6 @@
 import React from 'react'
 import ScrollCounter  from "@/components/Counter";
 
-const stats = [
-  { label: "Cost Savings Annually",
-    value: 1,
-    text: "M+",
-    description: "$"
-  },
-  {
-    label: "Clients Served",
-    value: 150,
-    text: "+",
-    description: ""
-  },
-  {
-    label: "Years Leadership Experience",
-    value: 50,
-    text: "+",
-    description: ""
-  },
-  {
-    label: "Reps Placed",
-    value: 350,
-    text: "+",
-    description: ""
-  },
-];
-
 export const DRCounters = () => {
   return (
     <section className='pl-25 pr-25 pb-25'>    
