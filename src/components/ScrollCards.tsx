@@ -35,41 +35,43 @@ const HorizontalSteps = () => {
   const circlesRef = useRef([]);
 
   useEffect(() => {
-    const pathLength = pathRef.current.getTotalLength();
-    pathRef.current.style.strokeDasharray = pathLength;
-    pathRef.current.style.strokeDashoffset = pathLength;
-
-    const ctx = gsap.context(() => {
-      gsap.to(pathRef.current, {
-        strokeDashoffset: 0,
-        duration: 2,
-        ease: "power1.in",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 100%",
-          toggleActions: "play none none none",
-        },
-      });
-
-      gsap.fromTo(
-        circlesRef.current,
-        { scale: 0, opacity: 0 },
-        {
-          scale: 1,
-          opacity: 1,
-          duration: 0.5,
-          stagger: 0.7,
-          ease: "back.in(0.2)",
+    if (pathRef.current) {
+      const pathLength = pathRef.current.getTotalLength();
+      pathRef.current.style.strokeDasharray = pathLength.toString();
+      pathRef.current.style.strokeDashoffset = pathLength.toString();
+  
+      const ctx = gsap.context(() => {
+        gsap.to(pathRef.current, {
+          strokeDashoffset: 0,
+          duration: 2,
+          ease: "power1.in",
           scrollTrigger: {
             trigger: containerRef.current,
-            start: "top 80%",
+            start: "top 100%",
             toggleActions: "play none none none",
           },
-        }
-      );
-    }, containerRef);
-
-    return () => ctx.revert();
+        });
+  
+        gsap.fromTo(
+          circlesRef.current,
+          { scale: 0, opacity: 0 },
+          {
+            scale: 1,
+            opacity: 1,
+            duration: 0.5,
+            stagger: 0.7,
+            ease: "back.in(0.2)",
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      }, containerRef);
+  
+      return () => ctx.revert();
+    }
   }, []);
 
   return (
