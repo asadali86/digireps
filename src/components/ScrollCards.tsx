@@ -31,7 +31,7 @@ const steps = [
 
 const HorizontalSteps = () => {
   const containerRef = useRef(null);
-  const pathRef = useRef(null);
+  const pathRef = useRef<SVGPathElement | null>(null);
   const circlesRef = useRef([]);
 
   useEffect(() => {
