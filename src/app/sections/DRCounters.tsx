@@ -3,7 +3,7 @@ import ScrollCounter  from "@/components/Counter";
 
 export const DRCounters = () => {
   return (
-    <section className='pl-25 pr-25 pb-25'>    
+    <section className='pl-25 pr-25 pb-25 bg-white'>    
         <div className="bg-white py-12 px-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 border-t border-b border-gray-200 py-8">
 

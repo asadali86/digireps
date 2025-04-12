@@ -18,7 +18,7 @@ const VideoModal = () => {
 
       {/* Modal */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center videoArea mx-auto my-auto">
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center videoArea mx-auto my-auto animate-fadeIn">
           <div className="relative w-full aspect-video">
             {/* Close Button */}
             <button

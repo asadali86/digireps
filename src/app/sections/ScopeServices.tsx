@@ -5,6 +5,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Image from 'next/image'
+import ScrollReveal from "@/components/ScrollReveal";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -41,17 +42,17 @@ const ScopeServices = () => {
   }, []);
   return (
     <section className='scopeServices pl-25 pr-0 py-25'>
-        
+        <ScrollReveal delay={0.2}>
           <h2 className='txtdarkGray font-medium mb-2'>Scope Of <span className='txtYellow'>Sevices</span></h2>
-        
-        
+        </ScrollReveal>
+        <ScrollReveal delay={0.2}>
           <p className='mb-8'>Find a plan that fits your needs and budget. No hidden fees, just results-driven solution</p>
-        
-        
+        </ScrollReveal>
+        <ScrollReveal delay={0.2}>
           <div className="mb-17">
-              <button className='bgColorBlue text-white rounded-full px-20 py-4'>Book Consultation</button>
+              <button className='bgColorBlue text-white rounded-full px-20 py-4 animated-button overflow-x-hidden'><span>Book Consultation</span></button>
           </div>
-        
+          </ScrollReveal>
         {swiperReady && (
         <Swiper
         modules={[Navigation]}

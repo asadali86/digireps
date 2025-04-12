@@ -43,8 +43,8 @@ const HorizontalSteps = () => {
       const ctx = gsap.context(() => {
         gsap.to(pathRef.current, {
           strokeDashoffset: 0,
-          duration: 2,
-          ease: "power1.in",
+          duration: 4,
+          ease: "power3.in",
           scrollTrigger: {
             trigger: containerRef.current,
             start: "top 100%",
@@ -58,9 +58,9 @@ const HorizontalSteps = () => {
           {
             scale: 1,
             opacity: 1,
-            duration: 0.5,
-            stagger: 0.7,
-            ease: "back.in(0.2)",
+            duration: 5,
+            stagger: 1,
+            ease: "back.out(1.8)",
             scrollTrigger: {
               trigger: containerRef.current,
               start: "top 80%",

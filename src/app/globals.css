@@ -191,6 +191,10 @@
   padding: 2rem 2rem 2.5rem 2rem;
 }
 
+#empowerSlider {
+  background: var(--color-5);
+}
+
 #empowerSlider h3 {
   font-family: var(--font-family-roboto);
   font-size: 1.75rem;
@@ -237,6 +241,10 @@
   height: 100%;
 }
 
+.successStories {
+  background: var(--color-5);
+}
+
 .successStories .leftCol {
   max-width: 40%;
   width: 100%;
@@ -271,6 +279,10 @@
   font-family: var(--font-family-poppins);
 }
 
+.partnerLogos {
+  background: var(--color-5);
+}
+
 .partnerLogos img {
   filter: grayscale(1);
   width: 70%;
@@ -281,7 +293,7 @@
 }
 
 .hearClients {
-  background: url("/images/wave-bg.webp") no-repeat center top;
+  background: var(--color-5) url("/images/wave-bg.webp") no-repeat center top;
   background-size: 100%;
 }
 
@@ -335,6 +347,7 @@
 
 .scopeServices {
   position: relative;
+  background: var(--color-5);
 }
 
 .scopeServices p {
@@ -399,6 +412,10 @@
   font-weight: 600;
   font-size: 1rem;
   font-family: var(--font-family-poppins);
+}
+
+.growFastBetterSmarter {
+  background: var(--color-5);
 }
 
 .growFastBetterSmarter .leftCol {
@@ -599,6 +616,10 @@ footer .fs-row a:hover {
   padding-bottom: 2rem;
 }
 
+.provenProcessStep {
+  background: var(--color-5);
+}
+
 .provenProcessStep .heading-bottom-line-blue-orange {
   background-position: left 26rem top 4rem, bottom 0rem left 13rem;
   padding-bottom: 1rem;
@@ -650,14 +671,105 @@ footer .fs-row a:hover {
   overflow: hidden;
 }
 
-.header-fixed {
-  position: fixed;
-  top: 0;
-  width: 100%;
+main.overlap {
+  margin-top: 50%;
+  position: relative;
+  z-index: 2;
 }
 
-main.full-vh {
-  margin-top: 100vh;
+.animated-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-button::before {
+  content: '';
+  width: 225px;
+  height: 1px;
+  background: #FEB402;
+  position: absolute;
+  left: 0 !important;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0;
+  border-radius: calc(infinity * 1px);
+  transition: all 0.5s ease-out;
+}
+
+.animated-button:hover::before {
+  background: #FEB402;
+  width: 100%;
+  height: 100%;
+  animation: bounceFill 1s ease forwards;
+}
+
+.animated-button span {
+  z-index: 1;
+  position: relative;
+}
+
+.animated-button:not(:hover)::before {
+  animation: bounceOut 0.8s ease forwards;
+}
+
+@keyframes bounceFill {
+  0% {
+    transform: translateY(0) scaleY(1);
+  }
+  15% {
+    transform: translateY(-10px) scaleY(1.5);
+  }
+  30% {
+    transform: translateY(25px) scaleY(0.8);
+  }
+  45% {
+    transform: translateY(-6px) scaleY(1.2);
+  }
+  60% {
+    transform: translateY(3px) scaleY(0.9);
+  }
+  75% {
+    transform: translateY(-3px) scaleY(1.1);
+  }
+  85% {
+    transform: translateY(0) scaleY(1);
+  }
+  100% {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    border-radius: 0;
+  }
+}
+
+@keyframes bounceOut {
+  0% {
+    left: 0;
+    width: 20%;
+    height: 10%;
+    transform: none;
+    border-radius: 0;
+  }
+  20% {
+    transform: translateY(-80px) scaleY(1.2);
+  }
+  40% {
+    transform: translateY(4px) scaleY(0.8);
+  }
+  60% {
+    transform: translateY(-5px) scaleY(1.1);
+  }
+  80% {
+    transform: translateY(0) scaleY(1);
+  }
+  100% {
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    border-radius: 2px;
+  }
 }
 
 @media screen and (max-width: 1536px) {
@@ -676,6 +788,20 @@ main.full-vh {
 
   .hearClients .rightCol img {
     width: 100%;
+  }
+
+  main.overlap {
+    margin-top: 56%;
+  }
+
+  .container {
+      max-width: 1280px;
+  }
+
+  .scopeServices h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    height: auto;
   }
 
 }

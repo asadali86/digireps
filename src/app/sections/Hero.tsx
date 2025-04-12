@@ -16,7 +16,7 @@ const Hero = () => {
         <p className='text-center leading-8 mb-8'>Growing a business is hard we make it a whole lot easier more predictable,  less stress <br /> full and more fun.</p>
       </ScrollReveal>
       <ScrollReveal delay={0.4}>
-        <button className='bgColorBlue text-white rounded-full px-11 py-4'><span>Unlock Your Growth Potential</span>s</button>
+        <button className='bgColorBlue text-white rounded-full px-11 py-4 animated-button overflow-x-hidden'><span>Unlock Your Growth Potentials</span></button>
       </ScrollReveal>
     </section>
   )

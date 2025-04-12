@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className='relative bg-white z-10'>
         <div className='flex'>
             <div className='col-01 flex flex-col items-center justify-center'>
                 <Image src="/images/digireps-logo-sm.webp" alt=" " width={191} height={62} className='mb-5' />

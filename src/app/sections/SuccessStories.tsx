@@ -5,28 +5,30 @@ import { Autoplay } from "swiper/modules";
 import Image from 'next/image'
 import 'swiper/css';
 import "swiper/css/autoplay";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const SuccessStories = () => {
   return (
     <>
         <section className='successStories pt-25 pl-25 pr-25 flex justify-between'>
             <div className="leftCol">
-                
-                    <h3 className='text-center rounded-full dot-heading font-medium mb-5 px-10 py-4'><span className='pl-2'>Case Studies</span></h3>
-                
-                
+                    <ScrollReveal delay={0.2}>
+                        <h3 className='text-center rounded-full dot-heading font-medium mb-5 px-10 py-4'><span className='pl-2'>Case Studies</span></h3>
+                    </ScrollReveal>
+                    <ScrollReveal delay={0.2}>                
                     <h2 className='txtBlue font-medium mb-5 heading-bottom-line'>
                         Success <span className='txtYellow'>Stories</span>: How We Help <span className='txtYellow'>Businesses</span> Scale
                     </h2>
-                
-                
-                    <p className='mb-5'>Discover how DigiReps has helped businesses grow by providing top-tier remote professionals researchers. See real-world examples of our impact and how we drive success remotely.</p>
-                
-                
+                    </ScrollReveal>
+                    <ScrollReveal delay={0.2}>
+                        <p className='mb-5'>Discover how DigiReps has helped businesses grow by providing top-tier remote professionals researchers. See real-world examples of our impact and how we drive success remotely.</p>
+                    </ScrollReveal>
+                    
                     <div className="text-center">
-                        <Image src="/images/cs-graphic.webp" alt=" " width={350} height={350} className='mx-auto' />
-                    </div>                    
-                
+                        <ScrollReveal delay={0.2}>
+                            <Image src="/images/cs-graphic.webp" alt=" " width={350} height={350} className='mx-auto' />
+                        </ScrollReveal>
+                    </div>
             </div>
             <div className="rightCol">
                 <div style={{ height: '100vh' }}>

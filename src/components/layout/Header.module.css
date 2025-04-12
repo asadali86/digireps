@@ -5,6 +5,10 @@
 .header {
     background: var(--color-1) url("/images/header-bg.webp") no-repeat center center / cover;
     height: 1011px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 /* Header Navigation */

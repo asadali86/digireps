@@ -13,7 +13,7 @@ import GrowCostEffectively from "../app/sections/GrowCostEffectively"
 
 const Home = () => {
   return (<>
-    <main>
+    <main className="overlap">
       {/* Competitive Edge */}
       <CompetitiveEdge />
       {/* Empower Your Business */}
